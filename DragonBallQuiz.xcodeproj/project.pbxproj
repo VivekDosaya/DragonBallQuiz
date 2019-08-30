@@ -54,14 +54,46 @@
 		F4B05FC42318DF410034E046 /* DragonBallQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				F4B05FC52318DF410034E046 /* AppDelegate.swift */,
-				F4B05FC72318DF410034E046 /* ViewController.swift */,
-				F4B05FC92318DF410034E046 /* Main.storyboard */,
+				F4B05FDA2318DF9F0034E046 /* Supporting Files */,
+				F4B05FD92318DF990034E046 /* Model */,
+				F4B05FD82318DF840034E046 /* Controller */,
+				F4B05FD72318DF6B0034E046 /* View */,
 				F4B05FCC2318DF420034E046 /* Assets.xcassets */,
-				F4B05FCE2318DF420034E046 /* LaunchScreen.storyboard */,
-				F4B05FD12318DF420034E046 /* Info.plist */,
 			);
 			path = DragonBallQuiz;
+			sourceTree = "<group>";
+		};
+		F4B05FD72318DF6B0034E046 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4B05FC92318DF410034E046 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4B05FD82318DF840034E046 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4B05FC72318DF410034E046 /* ViewController.swift */,
+				F4B05FC52318DF410034E046 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4B05FD92318DF990034E046 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4B05FDA2318DF9F0034E046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4B05FD12318DF420034E046 /* Info.plist */,
+				F4B05FCE2318DF420034E046 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
