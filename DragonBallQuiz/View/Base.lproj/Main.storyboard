@@ -73,6 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="Rcf-JW-y4H" id="tux-t4-qyG"/>
                         <outlet property="questionLabel" destination="xUv-28-eRx" id="acb-0H-4Ze"/>
                         <outlet property="questionNumberLabel" destination="GJh-3J-Kv0" id="FQY-dM-V8K"/>
                         <outlet property="scoreLabel" destination="x0P-ww-t9E" id="D8S-bm-b1L"/>

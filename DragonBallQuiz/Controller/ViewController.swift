@@ -9,19 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var progressBar: UIView!
     @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     var pickedAnswer = false
     var questionNumber = 0
-    
-    @IBOutlet weak var scoreLabel: UILabel!
+    var score = 0
     let allQuestions = QuestionBank()
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = allQuestions.list[questionNumber].questionText
+        updateUI()
 }
 
     @IBAction func buttonPressed(_ sender: AnyObject) {
@@ -39,10 +37,9 @@ class ViewController: UIViewController {
     }
     func checkAnswer(){
         if pickedAnswer == allQuestions.list[questionNumber].answer{
-            print("correct")
+            score = score + 1
         }
         else{
-            print("wrong")
         }
         questionNumber += 1
         nextQuestion()
@@ -50,12 +47,11 @@ class ViewController: UIViewController {
         
     }
     func nextQuestion(){
-        print("\(questionNumber)")
         
         if questionNumber <= 4{
-            print(true)
+            display()
             questionLabel.text = allQuestions.list[questionNumber].questionText
-            print(true)
+            
             
         }
         else{
@@ -72,11 +68,22 @@ class ViewController: UIViewController {
     }
     func startOver(){
         questionNumber = 0
+        score = 0
         updateUI()
 }
     func updateUI(){
+        progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(questionNumber+1)
+        display()
+        
         nextQuestion()
     }
+    func display(){
+        progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(questionNumber+1)
+        questionNumberLabel.text = "\(questionNumber + 1)/5"
+        scoreLabel.text = "Score : \(score)"
+        
+    }
+    
     
 }
 
