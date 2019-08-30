@@ -14,6 +14,8 @@
 		F4B05FD02318DF420034E046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B05FCE2318DF420034E046 /* LaunchScreen.storyboard */; };
 		F4B05FDC2318E6900034E046 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B05FDB2318E6900034E046 /* Question.swift */; };
 		F4B05FDE2318E6AE0034E046 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B05FDD2318E6AE0034E046 /* QuestionBank.swift */; };
+		F4B05FF52318F8630034E046 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B05FF32318F8630034E046 /* ProgressHUD.m */; };
+		F4B05FF62318F8630034E046 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F4B05FF42318F8630034E046 /* ProgressHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		F4B05FD12318DF420034E046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B05FDB2318E6900034E046 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F4B05FDD2318E6AE0034E046 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		F4B05FF22318F8630034E046 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		F4B05FF32318F8630034E046 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		F4B05FF42318F8630034E046 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		F4B05FF72318F9000034E046 /* DragonBallQuiz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DragonBallQuiz-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +64,14 @@
 		F4B05FC42318DF410034E046 /* DragonBallQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				F4B05FF12318F8530034E046 /* Supporting Files */,
 				F4B05FD12318DF420034E046 /* Info.plist */,
 				F4B05FCE2318DF420034E046 /* LaunchScreen.storyboard */,
 				F4B05FD92318DF990034E046 /* Model */,
 				F4B05FD82318DF840034E046 /* Controller */,
 				F4B05FD72318DF6B0034E046 /* View */,
 				F4B05FCC2318DF420034E046 /* Assets.xcassets */,
+				F4B05FF72318F9000034E046 /* DragonBallQuiz-Bridging-Header.h */,
 			);
 			path = DragonBallQuiz;
 			sourceTree = "<group>";
@@ -92,6 +100,16 @@
 				F4B05FDD2318E6AE0034E046 /* QuestionBank.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F4B05FF12318F8530034E046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4B05FF42318F8630034E046 /* ProgressHUD.bundle */,
+				F4B05FF22318F8630034E046 /* ProgressHUD.h */,
+				F4B05FF32318F8630034E046 /* ProgressHUD.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +144,7 @@
 				TargetAttributes = {
 					F4B05FC12318DF410034E046 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -152,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B05FF62318F8630034E046 /* ProgressHUD.bundle in Resources */,
 				F4B05FD02318DF420034E046 /* LaunchScreen.storyboard in Resources */,
 				F4B05FCD2318DF420034E046 /* Assets.xcassets in Resources */,
 				F4B05FCB2318DF410034E046 /* Main.storyboard in Resources */,
@@ -167,6 +187,7 @@
 			files = (
 				F4B05FDC2318E6900034E046 /* Question.swift in Sources */,
 				F4B05FDE2318E6AE0034E046 /* QuestionBank.swift in Sources */,
+				F4B05FF52318F8630034E046 /* ProgressHUD.m in Sources */,
 				F4B05FC82318DF410034E046 /* ViewController.swift in Sources */,
 				F4B05FC62318DF410034E046 /* AppDelegate.swift in Sources */,
 			);
@@ -314,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DragonBallQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,6 +344,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cic.DragonBallQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./DragonBallQuiz/DragonBallQuiz-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DragonBallQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +364,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cic.DragonBallQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./DragonBallQuiz/DragonBallQuiz-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -38,8 +38,12 @@ class ViewController: UIViewController {
     func checkAnswer(){
         if pickedAnswer == allQuestions.list[questionNumber].answer{
             score = score + 1
+            ProgressHUD.showSuccess("Correct!")
+            
+            
         }
         else{
+            ProgressHUD.showError("wrong!")
         }
         questionNumber += 1
         nextQuestion()
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
         updateUI()
 }
     func updateUI(){
-        progressBar.frame.size.width = (view.frame.size.width / 5) * CGFloat(questionNumber+1)
+        
         display()
         
         nextQuestion()
